@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học FontEnd 28Tech</title>
+</head>
+<body>
+    <a>Anchor - Mỏ neo - thẻ để khi click vào thẻ đó chuyển hướng sang trang khác</a>
+    <a href="url">Thuộc tính của thẻ a</a>
+    <!-- 1. href: xác định địa chỉ liên kết
+         2. target: _self: mặc định. Mở tab hiện tại
+                    _blank: mở tài liệu trong tab mới
+         3. title: thông tin bổ sung về một element -->
+    
+    
+    <img scr="hinh-anh.jpg/ đường link ảnh" alt="mô tả hình ảnh">
+    <!-- Thuộc tính thẻ img
+        1. src: chèn đường dẫn ảnh
+        2. alt: văn bản thay thể cho hình ảnh, mô tả khi ảnh bị lỗi -->
+
+    <!-- Ví dụ -->
+        <a href="https://28tech.com.vn/">
+            <img src="https://28tech.com.vn/assets/img/logo.png" alt="Logo 28tech">
+            </a>
+    
+
+    <video width="320" height="240" controls>
+	    <source src=“link-video.mp4" type="video/mp4">
+    </video>
+    <!-- Thuộc tính thẻ video
+        1. width/height: chiều dài và rộng của video
+        2. control: điều khiên, bật, tắt dừng,.. (type: kiểu mp4,..; autoplay: tự động phát video; muted: tắt tiếng)
+        3. loop: lặp lại video
+        4. scr: đường dẫn video -->
+        <!-- Lưu ý trong trình duyệt Chrome k cho phép tự động phát video. Muốn tự động phát thì thêm thuộc tính muted -->
+    
+    
+    <audio controls>
+       <source src=“link-audio.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Thuộc tính thẻ audio giống thẻ video chỉ k có height/width
+        controls: Thuộc tính điều khiển, như là bật, tạm dừng, âm lượng
+        - loop: Lặp lại audio
+        - src: Đường dẫn audio
+        - type: Kiểu video (Ví dụ: mpeg - là mp3, ogg, webm, wav)
+        -->
+
+
+        <!-- Thẻ table -->
+        <!-- Ý nghĩa các thẻ:
+                <table></table>: Xác định một bảng
+                <thead></thead>: Phần đầu của bảng
+                <tbody></tbody>: Phần thân của bảng
+                <tr></tr> (table row):  Xác định một hàng của bảng
+                <th></th> (table header): Xác định tiêu đề của bảng
+                <td></td> (table data): Xác định dữ liệu ô của bảng
+                Thuộc tính:
+                colspan: tạo ô mở rộng trên nhiều cột
+                rowspan: tạo ô kéo dài trên nhiều hàng
+                -->
+        
+                <style>
+                    table,th,td {
+                        border: 1px solid #000;
+                    }
+        
+                    th, td {
+                        padding: 10px;
+                    }
+                </style>
+
+        <table>
+            <thead>
+                <!-- <tr>
+                    <td rowspan="11">Hàng 1 Cột 1</td>
+                    <td>Hàng 1 Cột 2</td>
+                    <td>Hàng 1 Cột 3</td>
+                    <td>Hàng 1 Cột 4</td>
+                    <td>Hàng 1 Cột 5</td>
+                </tr> -->
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td rowspan="11">Hàng 1 Cột 1</td>
+                    <td>Hàng 1 Cột 2</td>
+                    <td colspan="3">Hàng 1 Cột 3</td>
+                    <!-- <td>Hàng 1 Cột 4</td>
+                    <td>Hàng 1 Cột 5</td> -->
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 2 Cột 1</td> -->
+                    <td>Hàng 2 Cột 2</td>
+                    <td colspan="3">Hàng 2 Cột 3</td>
+                    <!-- <td>Hàng 2 Cột 4</td>
+                    <td>Hàng 2 Cột 5</td> -->
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 3 Cột 1</td> -->
+                    <td colspan="4">Hàng 3 Cột 2</td>
+                    <!-- <td>Hàng 3 Cột 3</td>
+                    <td>Hàng 3 Cột 4</td>
+                    <td>Hàng 3 Cột 5</td> -->
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 4 Cột 1</td> -->
+                    <td>Hàng 4 Cột 2</td>
+                    <td colspan="3">Hàng 4 Cột 3</td>
+                    <!-- <td>Hàng 4 Cột 4</td>
+                    <td>Hàng 4 Cột 5</td> -->
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 5 Cột 1</td> -->
+                    <td>Hàng 5 Cột 2</td>
+                    <td colspan="3">Hàng 5 Cột 3</td>
+                    <!-- <td>Hàng 5 Cột 4</td>
+                    <td>Hàng 5 Cột 5</td> -->
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 6 Cột 1</td> -->
+                    <td colspan="4">Hàng 6 Cột 2</td>
+                    <!-- <td>Hàng 6 Cột 3</td>
+                    <td>Hàng 6 Cột 4</td>
+                    <td>Hàng 6 Cột 5</td> -->
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 7 Cột 1</td> -->
+                    <td>Hàng 7 Cột 2</td>
+                    <td>Hàng 7 Cột 3</td>
+                    <td>Hàng 7 Cột 4</td>
+                    <td>Hàng 7 Cột 5</td>
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 8 Cột 1</td> -->
+                    <td>Hàng 8 Cột 2</td>
+                    <td>Hàng 8 Cột 3</td>
+                    <td>Hàng 8 Cột 4</td>
+                    <td>Hàng 8 Cột 5</td>
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 9 Cột 1</td> -->
+                    <td>Hàng 9 Cột 2</td>
+                    <td>Hàng 9 Cột 3</td>
+                    <td>Hàng 9 Cột 4</td>
+                    <td>Hàng 9 Cột 5</td>
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 10 Cột 1</td> -->
+                    <td>Hàng 10 Cột 2</td>
+                    <td>Hàng 10 Cột 3</td>
+                    <td>Hàng 10 Cột 4</td>
+                    <td>Hàng 10 Cột 5</td>
+                </tr>
+
+                <tr>
+                    <!-- <td>Hàng 11 Cột 1</td> -->
+                    <td colspan="3">Hàng 11 Cột 2</td>
+                    <!-- <td>Hàng 11 Cột 3</td>
+                    <td>Hàng 11 Cột 4</td> -->
+                    <td>Hàng 11 Cột 5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <br>
+        <!-- Ví dụ 1:  -->
+        <table>
+            <thead>
+                <tr>
+                    <td>Level1</td>
+                    <td>Level2</td>
+                    <td>Level3</td>
+                    <td>Info</td>
+                    <td>Name</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- 1 -->
+                <tr>
+                    <td colspan="6">System</td>
+                </tr>
+<!-- 2 -->
+                <tr>
+                    <td colspan="4">System Apps</td>
+                    <td colspan="2">System Memory</td>                    
+                </tr>
+<!-- 3 -->
+                <tr>
+                    <td colspan="3">SystemEmv</td>
+                    <td>SystemEmv2</td>
+                    <td colspan="2">Memeory Test</td>
+                </tr>
+<!-- 4 -->
+                <tr>
+                    <td>App Test</td>
+                    <td>App Memory</td>
+                    <td>App Test</td>
+                    <td>App Test</td>
+                    <td>App Test</td>
+                    <td>App Test</td>
+                </tr>
+
+                <tr>
+                    <td>App Test</td>
+                    <td>App Memory</td>
+                    <td>App Test</td>
+                    <td>App Test</td>
+                    <td>App Test</td>
+                    <td>App Test</td>
+                </tr>
+            </tbody>
+        </table>
+    
+
+        <!-- type="1": Mặc định. Các mục trong danh sách sẽ được đánh dưới dạng số
+            type= "A": Các mục trong danh sách sẽ được đánh dưới dạng chữ hoa
+            type="a": Các mục trong danh sách sẽ được đánh dưới dạng chữ thường
+            type="I": Các mục trong danh sách sẽ được đánh dưới dạng số La Mã viết hoa
+            type="i": Các mục trong danh sách sẽ được đánh dưới dạng số La Mã viết thường
+            -->
+        <ul>
+            <li>Mục 1
+                <ol>
+                    <li>Mục 1 - 1</li>
+                    <li>Mục 1 - 2</li>
+                    <li>Mục 1 - 3</li>
+                </ol>
+            </li>
+            <li>Mục 2</li>
+            <li>Mục 3</li>
+        </ul>
+    
+        <ol>
+            <li>Mục 1</li>
+            <li>Mục 2</li>
+            <li>Mục 3</li>
+        </ol>
+    
+        <ol type="A">
+            <li>Mục A</li>
+            <li>Mục B</li>
+            <li>Mục C</li>
+        </ol>
+    
+        <ol type="a">
+            <li>Mục A</li>
+            <li>Mục B</li>
+            <li>Mục C</li>
+        </ol>
+    
+        <ol type="I">
+            <li>Mục A</li>
+            <li>Mục B</li>
+            <li>Mục C</li>
+        </ol>
+    
+        <ol type="i">
+            <li>Mục A</li>
+            <li>Mục B</li>
+            <li>Mục C</li>
+        </ol>
+    </ol>
+
+    <!-- Block và inline -->
+    <!-- Khi sử dụng cần nhớ quy tắc đảm bảo mô hình nội dung của HTML:
+        Phần tử cấp độ inline không được chứa phần tử cấp độ block
+        Inline chỉ chứa dữ liệu hoặc các phần tử inline khác.
+        Phần tử block thì được chứa các phần tử block, inline, dữ liệu.
+        Có trường hợp ngoại lệ là thẻ <a> (kiểu inline) nhưng có thể chứa phần tử kiểu block.
+        -->
+
+
+    <!-- Class và ID -->
+    <!-- Thuộc tính class dùng để xác định một hoặc nhiều tên lớp cho phần tử HTML. Tên lớp có thể dùng trong CSS hoặc JavaScript để thực hiện một số tác vụ nhất định cho phần tử có tên lớp đó.
+            Một class có thể áp dụng cho được nhiều element, và các element này không nhất thiết phải cùng loại thẻ.
+            Một element có thể thêm được nhiều class.
+            Thuộc tính class có thể được sử dụng trên bất kỳ phần tử HTML nào.
+            Tên lớp có phân biệt chữ hoa chữ thường.
+            -->
+
+    <!-- Thuộc tính id dùng để xác định một id duy nhất cho một element.
+            Trong một trang các element không được phép trùng tên của id.
+            Tên id có thể dùng trong CSS hoặc JavaScript để thực hiện một số tác vụ nhất định cho phần tử có tên id đó.
+            Tên id có phân biệt chữ hoa chữ thường.
+            Lưu ý: Tên id phải chứa ít nhất một ký tự, không được bắt đầu bằng số và không được chứa khoảng trắng (dấu cách, tab,...).
+            -->
+
+            <!-- Lưu ý quy tắc đặt tên
+                    Các ký tự là chữ cái viết thường: từ a →z
+                    Các ký tự là chữ cái viết hoa: từ A → Z
+                    Các ký tự là chữ số: từ 0 → 9
+                    Dấu gạch dưới: _
+                    Dấu gạch nối: -
+                    Lưu ý: Tên id và tên class tuyệt đối:
+                    Không chứa các ký tự đặc biệt (ví dụ như ! @ # $ % ^ &)
+                    Không bắt đầu là một số từ 0 → 9
+                    -->
+</body>
+</html>
